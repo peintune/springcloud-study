@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: consumer
+  cloud:
+    config:
+      label: ${run.label:master}
+      url: ${config.server.url:http://config-server:8888/}
+      profile: dev
 
 eureka:
   client:
@@ -14,3 +19,4 @@ eureka:
 feign:
   hystrix:
     enabled: true
+

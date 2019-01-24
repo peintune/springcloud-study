@@ -17,7 +17,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
-        <module>config</module>
+        <module>config-server</module>
         <module>eureka-server</module>
         <module>gateway-zuul</module>
         <module>order</module>
