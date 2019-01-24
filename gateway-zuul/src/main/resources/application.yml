@@ -11,9 +11,12 @@ spring:
 
 zuul:
   routes:
-    api-a:
-      path: /api-a/**
+    order:
+      path: /order/**
       serviceId: order
-    api-b:
-      path: /api-b/**
+    consumer:
+      path: /consumer/**
       serviceId: consumer
+    product:
+      path: /product/**
+      serviceId: product

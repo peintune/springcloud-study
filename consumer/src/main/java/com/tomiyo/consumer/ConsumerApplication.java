@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableDiscoveryClient
 @EnableFeignClients
 @RestController
-@EnableAutoConfiguration
 public class ConsumerApplication {
 
     @Autowired

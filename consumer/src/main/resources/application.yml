@@ -1,20 +1,28 @@
-server:
-  port: 8765
-
 spring:
   application:
     name: consumer
   cloud:
     config:
-      label: ${run.label:master}
-      url: ${config.server.url:http://config-server:8888/}
-      profile: dev
+      uri: ${config.server.url:http://config-server/}
+      label: master
+      profile: ${spring.profiles.active:dev}
+      fail-fast: true
+      retry:
+        initial-interval: 20000
+        max-attempts: 6
+    loadbalancer:
+      retry:
+        enabled: true
+
+server:
+  port: 8765
+  servlet:
+    context-path: /consumer
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-
 
 feign:
   hystrix:
