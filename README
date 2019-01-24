@@ -1,0 +1,11 @@
+springcloud 微服务demo
+
+配置中心
+服务注册于发现中心
+网关服务
+订单服务
+用户服务
+产品服务
+feigin使用
+ribbon使用
+hystrix使用
