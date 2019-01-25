@@ -23,6 +23,7 @@
         <module>order</module>
         <module>product</module>
         <module>consumer</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>
